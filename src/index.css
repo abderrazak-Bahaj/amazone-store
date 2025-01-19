@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#232F3E] text-white font-inter;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#FF9900] hover:bg-[#ffac33] text-black px-8 py-3 rounded-lg font-semibold 
+           transition-all duration-300 ease-in-out transform hover:scale-105;
+  }
+  
+  .card {
+    @apply bg-[#37475A] p-6 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300 ease-in-out
+           border border-[#37475A] hover:border-[#FF9900]/20;
+  }
+
+  .feature-item {
+    @apply flex items-start gap-4 p-6 rounded-lg bg-[#37475A]/50 hover:bg-[#37475A] 
+           transition-all duration-300 ease-in-out;
+  }
+}
+
+.gradient-overlay {
+  background: linear-gradient(180deg, rgba(35,47,62,0.8) 0%, rgba(35,47,62,0.95) 100%);
+}
+
+.scroll-indicator {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
