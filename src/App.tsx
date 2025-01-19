@@ -10,7 +10,7 @@ const subscriptionServices = [
       "Download & watch offline"
     ],
     image: "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&fit=crop&q=80&w=1000",
-    link: "https://www.amazon.com/Prime-Video/b?node=2676882011"
+    link: "https://www.amazon.co.uk/gp/video/primesignup/?tag=kolman-21"
   },
   {
     title: "Amazon Music Unlimited",
@@ -20,7 +20,7 @@ const subscriptionServices = [
       "Offline listening"
     ],
     image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=1000",
-    link: "https://music.amazon.com/"
+    link: "https://www.amazon.co.uk/music/unlimited?tag=kolman-21"
   },
   {
     title: "Amazon Channels",
@@ -30,7 +30,7 @@ const subscriptionServices = [
       "Add & remove channels anytime"
     ],
     image: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&q=80&w=1000",
-    link: "https://www.amazon.com/channels/b?node=2858778011"
+    link: "https://www.amazon.co.uk/channels?tag=kolman-21"
   },
   {
     title: "Kindle Unlimited",
@@ -40,7 +40,7 @@ const subscriptionServices = [
       "Cancel anytime"
     ],
     image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=1000",
-    link: "https://www.amazon.com/kindle-dbs/hz/subscribe/ku"
+    link: "https://www.amazon.co.uk/kindle-dbs/hz/signup?tag=kolman-21"
   },
   {
     title: "Amazon Baby Wishlist",
@@ -50,7 +50,17 @@ const subscriptionServices = [
       "Easy returns"
     ],
     image: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&q=80&w=1000",
-    link: "https://www.amazon.com/baby-reg/homepage"
+    link: "https://www.amazon.co.uk/baby-reg?tag=AssociateTrackingID?tag=kolman-21"
+  },
+  {
+    title:"Audible",
+    benefits: [
+      "Millions of books",
+      "Listen to audiobooks",
+      "Cancel anytime"
+    ],
+    image: "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&fit=crop&q=80&w=1000",
+    link:"https://www.amazon.co.uk/Audible-Free-Trial-Digital-Membership/dp/B00OPA2XFG?tag=kolman-21"
   }
 ];
 
@@ -103,9 +113,9 @@ function App() {
           <h1 className="font-manrope text-5xl md:text-7xl font-bold mb-8">
             All Your Entertainment,<br />One Subscription
           </h1>
-          <button className="btn-primary">
+          <a href="#services" className="btn-primary">
             Start Free Trial
-          </button>
+          </a>
           
           <div className="absolute bottom-10 scroll-indicator">
             <ChevronDown size={32} className="text-white/50" />
@@ -114,7 +124,7 @@ function App() {
       </section>
 
       {/* Subscription Cards */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4" index="services">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {subscriptionServices.map((service) => (
