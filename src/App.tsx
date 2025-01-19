@@ -124,7 +124,7 @@ function App() {
       </section>
 
       {/* Subscription Cards */}
-      <section className="py-20 px-4" index="services">
+      <section className="py-20 px-4" id="services">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {subscriptionServices.map((service) => (
